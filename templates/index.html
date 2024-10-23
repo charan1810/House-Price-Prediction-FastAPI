@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HousePricePrediction</title>
+        <link rel="stylesheet" href="\static\style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>House Price Prediction</h1>
+            <form action="/price_prediction/" method="post">
+                <label for="sq_feet">Enter the square feets of the house</label>
+                <input type="text" step=0.1 name="sq_feet" id="sq_feet" required>
+                <label for="rooms">Enter the number of rooms</label>
+                <input type="text" step=0.1 name="rooms" id="rooms" required>
+                <button type="submit">Predict Price</button>
+            </form>
+
+            {% if prediction %}
+            <div class="result">
+                <h2>Prediction Results</h2>
+                <p>The square feet of the House is: {{sq_feet}}</p>
+                <p>Total number of rooms in the house: {{rooms}}</p>
+                <p>Predicted Price of the House is: {{prediction}}</p>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+
+</html>
