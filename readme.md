@@ -1,0 +1,1 @@
+This is a house price prediction app based on Multiple Linear Regression created using HTML, CSS and FastAPI. The features involved in the dataset are Square feet of the house and total number of rooms in house based on that the price of the house is predicted.
